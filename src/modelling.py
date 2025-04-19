@@ -25,8 +25,8 @@ def train_model(train, test, order=(2,0,0)):
 
     #make predictions on test data 
     predictions = model_fit.predict(start=start, end=end)
-    predictions = pd.Series(predictions, index=test.index)
-    predictions.to_csv("Predictions.csv", index=True)
+    # predictions = pd.Series(predictions, index=test.index)
+    # predictions.to_csv("Predictions.csv", index=True)
 
     #error metric mae, rmse, mape
     mae = mean_absolute_error(test['Volume'], predictions)

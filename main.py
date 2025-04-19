@@ -1,5 +1,10 @@
-from src.pipeline import load_and_prepare, split_data
-from src.modelling import train_model, plot_actual_vs_predicted
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
+
+from pipeline import load_and_prepare, split_data
+from modelling import train_model, plot_actual_vs_predicted
 
 # Step 1: Load data
 df = load_and_prepare("data/tsla_2025.csv")
